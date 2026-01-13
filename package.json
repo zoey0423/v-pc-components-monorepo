@@ -8,14 +8,30 @@
     "dev": "pnpm -r dev",
     "build": "pnpm -r build",
     "test": "pnpm -r test",
-    "plop": "plop"
+    "lint": "pnpm -r --if-present lint",
+    "lint:fix": "pnpm -r --if-present lint -- --fix",
+    "plop": "plop",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.27.0",
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "change-case": "^5.4.4",
-    "plop": "^4.0.4"
+    "eslint": "^9.39.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "plop": "^4.0.4",
+    "typescript-eslint": "^8.52.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }

@@ -26,20 +26,20 @@ export interface ButtonProps
 }
 
 const sizeClasses: Record<ComponentSize, string> = {
-  small: 'px-2 py-1 text-xs',
-  middle: 'px-3 py-2 text-sm',
-  large: 'px-4 py-3 text-base',
+  small: 'px-3 py-1 text-xs',
+  middle: 'px-4 py-2 text-sm',
+  large: 'px-20 py-16 text-lg',
 }
 
 const variantClasses: Record<ComponentVariant, string> = {
   primary:
     'bg-primary text-white border border-primary hover:bg-primary-hover hover:border-primary-hover',
   secondary:
-    'bg-bg-secondary text-text-primary border border-border-primary',
+    'bg-gray-100 text-gray-900 border border-gray-300',
   outline:
-    'bg-transparent text-primary border border-primary',
+    'bg-white text-primary border border-primary',
   ghost:
-    'bg-transparent text-primary border border-transparent hover:bg-bg-secondary',
+    'bg-transparent text-primary border border-transparent hover:bg-gray-100',
   link:
     'bg-transparent text-primary border border-transparent underline-offset-4 hover:underline',
 }
@@ -66,8 +66,8 @@ export function Button({
       type={htmlType}
       className={cn(
         // base 样式（对应原来的 .btn）
-        'inline-flex items-center justify-center gap-1 rounded-md text-sm font-medium leading-normal',
-        'transition-all select-none border outline-none',
+       'inline-flex items-center justify-center gap-1 rounded-md font-medium transition-all select-none',
+         'transition-all select-none border outline-none',
         // 尺寸 & 变体
         sizeClasses[size],
         variantClasses[variant],

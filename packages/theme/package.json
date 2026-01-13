@@ -1,13 +1,28 @@
 {
-  "name": "theme",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@vcredit-sys-components/theme",
+  "version":  "1.0.0",
+  "description": "Design tokens and theme system",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./variables. css": "./dist/variables.css"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "scripts":  {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index. ts --format esm,cjs --dts --watch"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript":  "^5.0.0"
+  },
   "packageManager": "pnpm@10.27.0"
 }

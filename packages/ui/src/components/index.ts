@@ -1,3 +1,3 @@
 //导出组件本体
-export { Button } from './Button';
-export { Tag } from './Tag'
+export { Button, type ButtonProps } from './Button';
+// export { Tag } from './Tag'

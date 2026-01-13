@@ -4,10 +4,16 @@
     "module": "ESNext",
     "jsx": "react-jsx",
     "types": ["vitest/globals"],
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@vcredit-sys-components/types": ["../types/src/index.ts"],
+      "@vcredit-sys-components/theme": ["../theme/src/index.ts"],
+      "@vcredit-sys-components/utils": ["../utils/src/index.ts"]
+    }
   },
   "include": ["src"]
 }

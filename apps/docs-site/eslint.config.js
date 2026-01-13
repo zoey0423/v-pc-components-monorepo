@@ -25,7 +25,8 @@ export default defineConfig([
       globals: globals.browser,
       parserOptions: {
         tsconfigRootDir: __dirname,
-        project: ['./tsconfig.app.json'],
+        // 同时包含应用代码和 Node 环境配置（如 vite.config.ts）
+        project: ['./tsconfig.app.json', './tsconfig.node.json'],
       },
     },
   },

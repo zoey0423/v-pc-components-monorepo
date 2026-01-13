@@ -19,7 +19,10 @@
     /* Path mapping for workspace packages */
     "baseUrl": ".",
     "paths": {
-      "@vcredit-sys-components/ui": ["../../packages/ui/src/index.ts"]
+      "@vcredit-sys-components/ui": ["../../packages/ui/src/index.ts"],
+      "@vcredit-sys-components/utils": ["../../packages/utils/src/index.ts"],
+      "@vcredit-sys-components/types": ["../../packages/types/src/index.ts"],
+      "@vcredit-sys-components/theme": ["../../packages/theme/src/index.ts"]
     },
 
     /* Linting */

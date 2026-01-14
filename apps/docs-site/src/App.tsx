@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HomePage } from './pages/Home'
 import { DocPage } from './pages/DocPage'
 import { MainLayout } from './layouts/MainLayout'
@@ -16,13 +16,13 @@ function App() {
         {/* 文档布局 */}
         <Route path="/docs" element={<MainLayout />}>
           {/* 指南页面 */}
-          <Route path="guide/: slug" element={<DocPage />} />
+          <Route path="guide/:slug" element={<DocPage />} />
           
-          {/* 自动生成的组件路由 - 修改这部分 */}
-          <Route path="components/: slug" element={<ComponentPage />} />
+          {/* 自动生成的组件路由 */}
+          <Route path="components/:slug" element={<ComponentPage />} />
           
-          {/* 默认跳转 */}
-          <Route index element={<Navigate to="/docs/guide/getting-started" replace />} />
+          {/* 默认页：直接进入一个存在的组件文档（避免跳到未知的 getting-started） */}
+          {/* <Route index element={<Navigate to="/docs/components/button" replace />} /> */}
         </Route>
         
         {/* 临时测试页面 */}

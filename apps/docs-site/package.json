@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-"dev": "npm run generate:routes && vite",
+    "dev": "npm run generate:routes && vite",
     "build": "npm run generate:routes && tsc -b && vite build",
     "generate:routes": "tsx scripts/generateRoutes.ts",
     "lint": "eslint .",

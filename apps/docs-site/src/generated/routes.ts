@@ -1,4 +1,5 @@
-// 初始空配置，会被脚本自动覆盖
+
+// AUTO-GENERATED FILE - DO NOT EDIT
 export interface GeneratedRouteMeta {
   title: string
   description: string
@@ -11,7 +12,7 @@ export interface GeneratedRoute {
   meta: GeneratedRouteMeta
 }
 
-export interface SidebarItem {
+export type SidebarItem = {
   path: string
   title: string
   description: string
@@ -22,6 +23,44 @@ export interface SidebarItem {
 
 export type SidebarConfig = Record<string, SidebarItem[]>
 
-export const routes: GeneratedRoute[] = []
+export const routes: GeneratedRoute[] = [
+  {
+    path: '/components/Button',
+    component: 'Button',
+    meta: {
+      title: 'Button',
+      description: '',
+      category: 'Components'
+    }
+  },
+  {
+    path: '/components/avatar',
+    component: 'avatar',
+    meta: {
+      title: 'Avatar',
+      description: 'Avatar 组件文档',
+      category: 'Components'
+    }
+  }
+]
 
-export const sidebarConfig: SidebarConfig = {}
+export const sidebarConfig: SidebarConfig = {
+  "Components": [
+    {
+      "path": "/components/avatar",
+      "title": "Avatar",
+      "description": "Avatar 组件文档",
+      "category": "Components",
+      "order": 1,
+      "component": "avatar"
+    },
+    {
+      "path": "/components/Button",
+      "title": "Button",
+      "description": "",
+      "category": "Components",
+      "order": 999,
+      "component": "Button"
+    }
+  ]
+} as SidebarConfig

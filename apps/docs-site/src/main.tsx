@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import { Button } from '@vcredit-sys-components/ui'
 import './index.css'
+// import { TestComponent } from './test'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <div className="min-h-screen bg-bg-primary text-text-primary p-5 space-x-3">
@@ -20,4 +21,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       块级按钮
     </Button>
   </div>,
+  // <div>
+  //   <TestComponent />
+  //   <div className="min-h-screen bg-custom-bg-primary text-custom-text-primary p-5 space-x-3">
+  //     {/* 你的按钮代码 */}
+  //   </div>
+  // </div>
 )

@@ -33,15 +33,15 @@ const sizeClasses: Record<ComponentSize, string> = {
 
 const variantClasses: Record<ComponentVariant, string> = {
   primary:
-    'bg-primary text-white border border-primary hover:bg-primary-hover hover:border-primary-hover',
+    'bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600',
   secondary:
-    'bg-gray-100 text-gray-900 border border-gray-300',
+    'bg-gray-100 text-gray-900 border-gray-300 hover:bg-gray-200',
   outline:
-    'bg-white text-primary border border-primary',
+    'bg-transparent text-blue-500 border-blue-500 hover:bg-blue-50',
   ghost:
-    'bg-transparent text-primary border border-transparent hover:bg-gray-100',
+    'bg-transparent text-blue-500 border-transparent hover:bg-gray-100',
   link:
-    'bg-transparent text-primary border border-transparent underline-offset-4 hover:underline',
+    'bg-transparent text-blue-500 border-transparent underline-offset-4 hover:underline',
 }
 
 export function Button({

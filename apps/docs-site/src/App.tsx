@@ -1,16 +1,35 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HomePage } from './pages/Home'
+import { ComponentPage } from './pages/ComponentPage' 
+import { DocPage } from './pages/DocPage'
+import { MainLayout } from './layouts/MainLayout'
+// import { routes } from './routes'
+import { PlaygroundPage } from './pages/PlaygroungPage'
 
 function App() {
   return (
-    <div className="min-h-screen bg-bg-primary text-text-primary flex items-center justify-center">
-      <div className="space-y-6 text-center">
-        <h1 className="text-3xl font-semibold">PC UI Docs</h1>
-        <p className="text-text-secondary">
-          编辑 <code className="font-mono">apps/docs-site/src</code> 开始搭文档站
-        </p>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* 首页 */}
+        <Route path="/" element={<HomePage />} />
+        
+        {/* 文档布局 */}
+        <Route path="/docs" element={<MainLayout />}>
+          {/* 指南页面 */}
+          <Route path="guide/: slug" element={<DocPage />} />
+          
+          {/* 组件页面 */} 
+          <Route path="components/: slug" element={<ComponentPage />} />
+          
+          {/* 默认跳转 */}
+          <Route index element={<Navigate to="/docs/guide/getting-started" replace />} />
+        </Route>
+        
+        {/* 临时测试页面 */}
+        <Route path="/playground" element={<PlaygroundPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
 export default App
-

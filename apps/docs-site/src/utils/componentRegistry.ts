@@ -1,0 +1,12 @@
+// AUTO-GENERATED IMPORTS
+import { Button } from '@vcredit-sys-components/ui'
+
+// 组件注册表，用于在文档中动态渲染组件
+export const componentRegistry = {
+  // AUTO-GENERATED REGISTRY
+  'Button': Button,
+}
+
+export function getComponent(name: string) {
+  return componentRegistry[name as keyof typeof componentRegistry]
+}

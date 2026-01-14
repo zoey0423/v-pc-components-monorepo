@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { HomePage } from './pages/Home'
-import { ComponentPage } from './pages/ComponentPage' 
 import { DocPage } from './pages/DocPage'
 import { MainLayout } from './layouts/MainLayout'
-// import { routes } from './routes'
 import { PlaygroundPage } from './pages/PlaygroungPage'
+// import { routes } from './generated/routes' // 导入自动生成的路由
+import { ComponentPage } from './pages/ComponentPage'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           {/* 指南页面 */}
           <Route path="guide/: slug" element={<DocPage />} />
           
-          {/* 组件页面 */} 
+          {/* 自动生成的组件路由 - 修改这部分 */}
           <Route path="components/: slug" element={<ComponentPage />} />
           
           {/* 默认跳转 */}

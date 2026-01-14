@@ -14,6 +14,21 @@ export default [
     ignores: ['dist', 'node_modules', '**/*.config.js', '**/*.config.ts', '**/*.config.mjs', 'pnpm-lock.yaml'],
   },
   js.configs.recommended,
+  // 根目录的 JS/MJS 文件配置
+  {
+    files: ['*.{js,mjs}', 'plopfile.mjs'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.node,
+      },
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ['./tsconfig.json'],
+      },
+    },
+  },
+  // TypeScript 配置（只对 TypeScript 文件）
   ...tseslint.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
